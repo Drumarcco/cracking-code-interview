@@ -1,0 +1,15 @@
+{
+  "name": "cracking-code-interview",
+  "version": "1.0.0",
+  "description": "Cracking the code interview challenges solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec --recursive"
+  },
+  "author": "Marco Alvarado <malvarado@nearsoft.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
