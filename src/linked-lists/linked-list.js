@@ -44,13 +44,22 @@ LinkedList.prototype.remove = function(val) {
   }
 }
 
-LinkedList.prototype.count = function () {
+LinkedList.prototype.count = function (value) {
   if(!this.head) return 0;
 
   var count = 1;
+  if (value) {
+    if (this.head.value !== value) count = 0;
+  }
   var current = this.head;
   while(current.next) {
-    count++;
+    if (value) {
+      if (value === current.value) {
+        count++;
+      }
+    } else {
+      count++;
+    }
     current = current.next;
   }
 

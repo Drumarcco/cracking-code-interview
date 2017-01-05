@@ -16,6 +16,21 @@ describe('Linked Lists', function() {
     expect(list.count()).to.equal(4);
   });
 
+  describe('count', function() {
+    it('should count all the elements', function() {
+      expect(list.count()).to.equal(4);
+    });
+
+    it('should count value repetitions', function() {
+      list.push(1);
+      list.push(1);
+      expect(list.count(1)).to.equal(3);
+      expect(list.count(2)).to.equal(1);
+      expect(list.count(3)).to.equal(1);
+      expect(list.count(4)).to.equal(1);
+    });
+  })
+
   describe('contains', function() {
     it('should return true if contains element', function() {
       expect(list.contains(3)).to.equal(true);
