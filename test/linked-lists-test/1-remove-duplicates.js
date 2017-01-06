@@ -12,5 +12,6 @@ describe('1. Remove duplicates from an unsorted linked list', function() {
 
     list.removeDuplicates();
     expect(list.count()).to.equal(2);
+    expect(list.count(1)).to.equal(1);
   });
 });
