@@ -47,12 +47,10 @@ LinkedList.prototype.remove = function(val) {
 LinkedList.prototype.count = function (value) {
   if(!this.head) return 0;
 
-  var count = 1;
-  if (value) {
-    if (this.head.value !== value) count = 0;
-  }
+  var count = 0;
   var current = this.head;
-  while(current.next) {
+
+  while (current) {
     if (value) {
       if (value === current.value) {
         count++;
